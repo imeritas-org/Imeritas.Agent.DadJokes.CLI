@@ -1,0 +1,18 @@
+solution: Imeritas.Agent.DadJokes.CLI
+repository: imeritas-org/Imeritas.Agent.DadJokes.CLI
+allowed_paths:
+  - src/Imeritas.Agent.DadJokes.CLI/**
+  - src/Imeritas.Agent.DadJokes.CLI.Tests/**
+  - docs/**
+read_only_paths:
+  - ../Imeritas.Agent/src/Imeritas.Agent.Contracts/**
+context_paths:
+  - CLAUDE.md
+  - ../Imeritas.Agent/CLAUDE.md
+  - ../Imeritas.Agent/docs/SOLUTION_DEVELOPMENT.md
+build:
+  - dotnet build Imeritas.Agent.DadJokes.CLI.slnx
+test:
+  - dotnet test src/Imeritas.Agent.DadJokes.CLI.Tests
+core:
+  enhancement_repo: imeritas/Imeritas.Agent

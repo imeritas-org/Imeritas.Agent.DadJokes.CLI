@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Imeritas Agent Implementation Plan",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["title", "tier", "depends_on", "description", "acceptance_criteria", "allowed_paths", "test_strategy"],
+    "properties": {
+      "title": {
+        "type": "string",
+        "maxLength": 80,
+        "description": "Short descriptive title for the GitHub Issue"
+      },
+      "tier": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 3,
+        "description": "Execution tier: 1=foundation, 2=features, 3=integration"
+      },
+      "depends_on": {
+        "type": "array",
+        "items": { "type": "integer", "minimum": 0 },
+        "description": "Indices of prerequisite issues (0-based within the plan)"
+      },
+      "description": {
+        "type": "string",
+        "description": "What this issue delivers and why"
+      },
+      "acceptance_criteria": {
+        "type": "array",
+        "items": { "type": "string" },
+        "minItems": 1,
+        "description": "Testable criteria for completion"
+      },
+      "allowed_paths": {
+        "type": "array",
+        "items": { "type": "string" },
+        "minItems": 1,
+        "description": "Glob patterns for paths the agent may modify"
+      },
+      "test_strategy": {
+        "type": "string",
+        "description": "How this issue's work will be tested"
+      },
+      "estimated_complexity": {
+        "type": "string",
+        "enum": ["low", "medium", "high"],
+        "description": "Rough complexity estimate"
+      },
+      "test_command_override": {
+        "type": "string",
+        "description": "Shell command that overrides the default test command for this issue"
+      }
+    }
+  },
+  "minItems": 1,
+  "maxItems": 20
+}

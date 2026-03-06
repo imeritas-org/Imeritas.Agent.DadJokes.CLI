@@ -1,0 +1,22 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Imeritas.Agent.DadJokes.CLI/Imeritas.Agent.DadJokes.CLI.csproj" />
+    <Project Path="src/Imeritas.Agent.DadJokes.CLI.Tests/Imeritas.Agent.DadJokes.CLI.Tests.csproj" />
+  </Folder>
+  <Folder Name="/docs/">
+    <File Path="docs/REQUIREMENTS.md" />
+    <File Path="docs/TODO.md" />
+    <File Path="docs/EVOLUTION.md" />
+    <File Path="docs/GAP_ANALYSIS.md" />
+    <File Path="docs/CONSIDERATIONS.md" />
+    <File Path="docs/DEPLOYMENT.md" />
+    <File Path="docs/plan-schema.json" />
+  </Folder>
+  <Folder Name="/Solution Items/">
+    <File Path="CLAUDE.md" />
+    <File Path="README.md" />
+    <File Path="nuget.config" />
+    <File Path=".gitignore" />
+    <File Path="agent.yml" />
+  </Folder>
+</Solution>
