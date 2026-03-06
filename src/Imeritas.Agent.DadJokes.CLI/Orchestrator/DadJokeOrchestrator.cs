@@ -16,6 +16,11 @@ public class DadJokeOrchestrator : ITaskOrchestrator
     private readonly IStorageService _storage;
     private readonly ILogger<DadJokeOrchestrator> _logger;
 
+    /// <summary>
+    /// Initializes the DadJokeOrchestrator with storage and logging dependencies.
+    /// </summary>
+    /// <param name="storage">Storage service for persisting task state.</param>
+    /// <param name="logger">Logger instance for structured logging.</param>
     public DadJokeOrchestrator(
         IStorageService storage,
         ILogger<DadJokeOrchestrator> logger)
